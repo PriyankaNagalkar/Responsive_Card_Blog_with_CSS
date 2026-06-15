@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:cursive;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    /* max-width: 65vw; */
+    padding: 2rem 1rem;
+    margin: 1 auto;
+}
+
+.header {
+    margin-bottom: 2.5rem;
+}
+
+.header_title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.header_content {
+    max-width: 650px;
+    text-align: center;
+    color: rgb(78, 76, 76);
+    margin: 0 auto;
+}
+
+.main_container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card_container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(130, 129, 129);
+    border-radius: 8px;
+}
+
+.image_container {
+    position: relative;
+    overflow: hidden;
+    height: 12rem;
+}
+
+.card_image {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cards_data {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem ;
+}
+
+.card_Title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(39, 36, 36);
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.card_text {
+    color: rgb(78, 76, 76);
+    font-size: 0.8rem;
+}
+
+.card_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.auther_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author {
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(147, 140, 140);
+    border-radius: 50%;
+    /* background-color: rgb(210, 205, 205); */
+    transition: transform 0.6s ease;
+}
+
+.author_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    color: rgb(44, 44, 139);
+}
+
+.date {
+    color: rgb(115, 109, 109);
+}
+.card_text2{
+    display: none;
+}
+
+.card_container:hover .card_image {
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    /* transform: rotate(360deg); */
+}
+
+.tag_Container{
+    border: 1px solid gray;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    padding: 0.1rem 0.2rem;
+    color: gray;
+    height: 25px;
+    box-shadow: 5px 5px 8px gray inset;
+}
+.tag_Container:hover{
+ background-color: rgb(210, 205, 205);
+ color: black;
+ cursor: pointer;
+}
+.card_Title:hover {
+    color: rgb(72, 72, 227);
+}
+.author:hover{
+    background-color: rgb(210, 205, 205);
+    transform: rotate(360deg);
+}
+
+@media (max-width: 1000px) {
+    .main_container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card_footer{
+        padding: 1rem;
+    }
+    .auther_container{
+        gap: 0.3rem;
+    }
+    .author{
+        height: 2.3rem;
+        width: 2.3rem;
+    }
+    .name, .date{
+        font-size: 12px;
+    }
+    .tag_Container{
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .main_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+     
+}
+
+@media (max-width: 450px) {
+    .main_container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .header{
+        margin-bottom: 1.9rem;
+    }
+    .cards_data{
+        padding: 0.8rem;
+    }
+    .card_footer{
+        padding: 1rem;
+    }
+}
